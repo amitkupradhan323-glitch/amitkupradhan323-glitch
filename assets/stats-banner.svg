@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 60" width="100%" height="60" fill="none">
+  <defs>
+    <filter id="neonGlowStats" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="barLineGradStats" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0" />
+      <stop offset="30%" stop-color="#00FF66" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#00FF66" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00FF66" stop-opacity="0" />
+    </linearGradient>
+    <style>
+      @keyframes blinkTag {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+      @keyframes sweepLightRev {
+        0% { transform: translateX(900px); }
+        100% { transform: translateX(-200px); }
+      }
+      .tag-blink { animation: blinkTag 1.8s infinite ease-in-out; }
+      .sweep-laser-rev { animation: sweepLightRev 4.5s infinite linear; }
+      .header-mono { font-family: 'Courier New', monospace; font-weight: bold; }
+    </style>
+  </defs>
+
+  <rect width="880" height="60" rx="8" fill="#02140a" stroke="#00FF66" stroke-width="1.2" stroke-opacity="0.5" />
+  
+  <!-- Sweeping laser line -->
+  <line x1="0" y1="58" x2="880" y2="58" stroke="url(#barLineGradStats)" stroke-width="2" />
+  <rect class="sweep-laser-rev" x="0" y="57" width="100" height="3" fill="#ffffff" filter="url(#neonGlowStats)" />
+
+  <!-- Corner Brackets -->
+  <path d="M 8 18 L 8 8 L 18 8" stroke="#00FF66" stroke-width="2" />
+  <path d="M 872 18 L 872 8 L 862 8" stroke="#00FF66" stroke-width="2" />
+  <path d="M 8 42 L 8 52 L 18 52" stroke="#00FF66" stroke-width="2" />
+  <path d="M 872 42 L 872 52 L 862 52" stroke="#00FF66" stroke-width="2" />
+
+  <!-- Animated Pulse Dot -->
+  <circle cx="36" cy="30" r="5" fill="#00FF66" class="tag-blink" filter="url(#neonGlowStats)" />
+
+  <!-- Section Title -->
+  <text x="56" y="36" fill="#00FF66" font-size="16" class="header-mono" letter-spacing="2">
+    // TELEMETRY &amp; METRICS : : GITHUB_ANALYTICS
+  </text>
+
+  <!-- Right Side Status -->
+  <text x="840" y="35" fill="#6ee7b7" font-size="11" class="header-mono" text-anchor="end">
+    [DATA: LIVE SYNC]
+  </text>
+</svg>

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 100" width="100%" height="100" fill="none">
+  <defs>
+    <linearGradient id="rainFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#02140a" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#010a05" stop-opacity="0.95" />
+    </linearGradient>
+
+    <filter id="greenGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .matrix-font {
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      @keyframes fall1 { 0% { transform: translateY(-90px); opacity: 0; } 20% { opacity: 0.9; } 80% { opacity: 0.9; } 100% { transform: translateY(110px); opacity: 0; } }
+      @keyframes fall2 { 0% { transform: translateY(-90px); opacity: 0; } 20% { opacity: 0.8; } 80% { opacity: 0.8; } 100% { transform: translateY(110px); opacity: 0; } }
+      @keyframes fall3 { 0% { transform: translateY(-90px); opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(110px); opacity: 0; } }
+      @keyframes fall4 { 0% { transform: translateY(-90px); opacity: 0; } 20% { opacity: 0.7; } 80% { opacity: 0.7; } 100% { transform: translateY(110px); opacity: 0; } }
+
+      .col-1 { animation: fall1 2.8s linear infinite; }
+      .col-2 { animation: fall2 3.4s linear 0.7s infinite; }
+      .col-3 { animation: fall3 2.5s linear 1.2s infinite; }
+      .col-4 { animation: fall4 3.9s linear 0.3s infinite; }
+      .col-5 { animation: fall1 3.1s linear 1.8s infinite; }
+      .col-6 { animation: fall2 2.6s linear 0.5s infinite; }
+      .col-7 { animation: fall3 3.5s linear 1.4s infinite; }
+      .col-8 { animation: fall4 2.9s linear 0.9s infinite; }
+      .col-9 { animation: fall1 3.3s linear 2.1s infinite; }
+      .col-10 { animation: fall2 2.7s linear 1.6s infinite; }
+
+      .head-char { fill: #ffffff; filter: url(#greenGlow); }
+      .lead-char { fill: #00FF66; filter: url(#greenGlow); }
+      .tail-char { fill: #059669; }
+      .dim-char { fill: #047857; opacity: 0.5; }
+    </style>
+  </defs>
+
+  <rect width="880" height="100" rx="8" fill="url(#rainFade)" stroke="#00FF66" stroke-width="1" stroke-opacity="0.3" />
+
+  <!-- Matrix Columns -->
+  <!-- Col 1 -->
+  <g class="col-1 matrix-font" transform="translate(45, 0)">
+    <text x="0" y="20" class="dim-char">0</text>
+    <text x="0" y="35" class="tail-char">1</text>
+    <text x="0" y="50" class="lead-char">X</text>
+    <text x="0" y="65" class="head-char">9</text>
+  </g>
+
+  <!-- Col 2 -->
+  <g class="col-2 matrix-font" transform="translate(130, 0)">
+    <text x="0" y="15" class="dim-char">A</text>
+    <text x="0" y="30" class="tail-char">I</text>
+    <text x="0" y="45" class="lead-char">7</text>
+    <text x="0" y="60" class="head-char">F</text>
+  </g>
+
+  <!-- Col 3 -->
+  <g class="col-3 matrix-font" transform="translate(220, 0)">
+    <text x="0" y="25" class="dim-char">P</text>
+    <text x="0" y="40" class="tail-char">Y</text>
+    <text x="0" y="55" class="lead-char">3</text>
+    <text x="0" y="70" class="head-char">K</text>
+  </g>
+
+  <!-- Col 4 -->
+  <g class="col-4 matrix-font" transform="translate(310, 0)">
+    <text x="0" y="10" class="dim-char">C</text>
+    <text x="0" y="25" class="tail-char">+</text>
+    <text x="0" y="40" class="lead-char">+</text>
+    <text x="0" y="55" class="head-char">1</text>
+  </g>
+
+  <!-- Col 5 -->
+  <g class="col-5 matrix-font" transform="translate(410, 0)">
+    <text x="0" y="20" class="dim-char">J</text>
+    <text x="0" y="35" class="tail-char">A</text>
+    <text x="0" y="50" class="lead-char">V</text>
+    <text x="0" y="65" class="head-char">A</text>
+  </g>
+
+  <!-- Col 6 -->
+  <g class="col-6 matrix-font" transform="translate(510, 0)">
+    <text x="0" y="15" class="dim-char">G</text>
+    <text x="0" y="30" class="tail-char">I</text>
+    <text x="0" y="45" class="lead-char">T</text>
+    <text x="0" y="60" class="head-char">0</text>
+  </g>
+
+  <!-- Col 7 -->
+  <g class="col-7 matrix-font" transform="translate(600, 0)">
+    <text x="0" y="25" class="dim-char">N</text>
+    <text x="0" y="40" class="tail-char">E</text>
+    <text x="0" y="55" class="lead-char">U</text>
+    <text x="0" y="70" class="head-char">R</text>
+  </g>
+
+  <!-- Col 8 -->
+  <g class="col-8 matrix-font" transform="translate(690, 0)">
+    <text x="0" y="10" class="dim-char">D</text>
+    <text x="0" y="25" class="tail-char">E</text>
+    <text x="0" y="40" class="lead-char">V</text>
+    <text x="0" y="55" class="head-char">X</text>
+  </g>
+
+  <!-- Col 9 -->
+  <g class="col-9 matrix-font" transform="translate(770, 0)">
+    <text x="0" y="20" class="dim-char">1</text>
+    <text x="0" y="35" class="tail-char">0</text>
+    <text x="0" y="50" class="lead-char">1</text>
+    <text x="0" y="65" class="head-char">1</text>
+  </g>
+
+  <!-- Col 10 -->
+  <g class="col-10 matrix-font" transform="translate(840, 0)">
+    <text x="0" y="15" class="dim-char">O</text>
+    <text x="0" y="30" class="tail-char">N</text>
+    <text x="0" y="45" class="lead-char">L</text>
+    <text x="0" y="60" class="head-char">N</text>
+  </g>
+
+  <!-- Central Cyber Badge Overlay -->
+  <rect x="250" y="28" width="380" height="44" rx="22" fill="#021a0d" stroke="#00FF66" stroke-width="1.5" filter="url(#greenGlow)" />
+  <circle cx="280" cy="50" r="4" fill="#00FF66" />
+  <text x="295" y="55" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">
+    INITIATE NEURAL MATRIX // V2.0
+  </text>
+</svg>
